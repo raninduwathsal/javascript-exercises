@@ -1,7 +1,7 @@
 const palindromes = function (arr) {
     let filtered = arr.filter(notpunctuation);
     let letterArray = charactersToList(filtered);
-    
+
 
 
 };
@@ -26,6 +26,7 @@ function charactersToList(str) {
 
     // Return the list of characters
     return charList;
+}
 
 // Do not edit below this line
 module.exports = palindromes;
