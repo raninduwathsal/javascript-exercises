@@ -9,7 +9,7 @@ const palindromes = function (arr) {
 };
 
 function ispunctuation(text) {
-    if (text === "!"){
+    if (text === "!" || text === "," || text ==="."){
         return false;
     }
     true;
