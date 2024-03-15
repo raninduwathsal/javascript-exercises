@@ -1,14 +1,18 @@
 const palindromes = function (arr) {
-    let filtered = arr.filter(notpunctuation);
-    let letterArray = charactersToList(filtered);
-
-
-
+    let letterArrayUnfiltered = charactersToList(arr);
+    let letterArray = letterArrayUnfiltered.filter(ispunctuation);
+    let revesedArray = letterArray.reverse();
+    if (revesedArray === letterArray){
+        return true;
+    }
+    return false;
 };
 
-function notpunctuation(text) {
-    const punctuationRegex = /[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]/g;
-    return !punctuationRegex.test(text);
+function ispunctuation(text) {
+    if (text === "!"){
+        return false;
+    }
+    true;
 };
 
 function charactersToList(str) {
